@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href={{url_for('static', filename='style.css')}}/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+    <meta content="portfolio site Dimas Abreu" name="Dimas Abreu">
+    <!-- Desabilitando tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no">
     <link rel="shortcut icon" href="{{ url_for('static', filename='logo.ico') }}">
+
     <title>Dimas Abreu</title>
+
+    <link href="{{url_for( 'static', filename='design.css' )}}" rel="stylesheet">
 </head>
-<body>
-    <h1>Abacate voador</h1>
-    <script src={{url_for('static', filename='script.js')}}></script>
+
+<body class="minimal">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+    <!-- Add your content of header -->
+    <header>
+        <nav class="navbar  navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav ">
+                        <li><a href="/"                 title="">Inicio</a></li>
+                        <li><a href="./works.html"      title="">Trabalhos</a></li>
+                        <li><a href="./about.html"      title="">Sobre</a></li>
+                        <li><a href="./contact.html"    title="">Contato</a></li>
+
+                    </ul>
+        </nav>
+    </header>
+    <!-- Colocar o conteudo aqui -->
+    <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./static/assets/images/space.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="hero-full-wrapper">
+                        <div class="text-content">
+                            <h1>Olá,<br>
+                                <span id="typed-strings">
+                                <span>Me chamo Dimas Abreu</span>
+                                <span>Bem vindo ao meu portfolio</span>
+                                <span>Sou dev Python</span>
+                                </span>
+                                <span id="typed"></span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            type();
+            movingBackgroundImage();
+        });
+    </script>
+
+
+    <script src={{url_for( 'static', filename='main.js' )}}></script>
 </body>
+
 </html>
